@@ -1,7 +1,7 @@
 # values
 # data types
 # input
-
+# operators
 # numbers: 1,2,3,-1,0... (integers: so nguyen); 1.25, 3.14, 0.00(float)
 # string: "hello", 'man'
 # boolean: True False
@@ -81,4 +81,3 @@ print(1 or 2) # Kết quả 1
 
 print(bool({})) # False
 
-print(1+2)
