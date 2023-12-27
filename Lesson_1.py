@@ -81,3 +81,4 @@ print(1 or 2) # Kết quả 1
 
 print(bool({})) # False
 
+print(1+2)
