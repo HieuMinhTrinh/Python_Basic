@@ -99,3 +99,22 @@ a = [1, 3, 10, 100, 45]
 new_lst = a[0:2:1] # [start:end:step] không lấy giá trị ở end, default step 1
 print(new_lst)
 print(new_lst is a)
+
+# Chú ý QUAN TRỌNG ĐỐI hàm copy trong List
+
+lst1 = [[1, [2, 3]], (4,5)]
+lst2 = lst1[:] # Sử dụng lst1[:] hoặc lst1.copy() là như nhau
+
+lst1[0][1].append(100)
+
+print(lst2) # Kết quả: lst1 = [[1, [2, 3, 100], (4,5)] .
+            # Lí do bởi vì line 106: khi sử dụng chỉ copy ngoặc vuông [] ngoài cùng, mặc dù lst1 và lst2 là 2 cái khác nhau, nên khi thay đổi LIST bên trong lst1 thì lst2 vẫn thay đổi
+
+# Cách sửa : from copy (library) import in copy
+from copy import deepcopy #deepcopy: copy sâu, hiểu như là copy toàn bộ
+lst3 = [[3, [4, 5]], (1,2)]
+lst4 = deepcopy(lst3)
+
+lst3[0][1].append(100)
+
+print(lst4)
