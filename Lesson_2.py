@@ -65,3 +65,37 @@ del numbers[1] # Xóa ở vị trí 1
 
 friends = ["Jack", "John", "Kenny", "Henry"]
 print(friends[0])
+"""
++ list in list
++ copy list
++ list slicing
+
+"""
+print("---------------List in list--------------")
+#                0           1             2
+friends = [["Bob", 23], ["Jen", 34], ["Kenny", 56]]
+print(friends[0][0])
+
+print("----------------Copy list------------")
+lst1 = [1 , 3, 2]
+lst2 = lst1
+# is: Toán tử dùng để kiểm tra địa chỉ (ID) -> True False
+print(lst1 is lst2)
+print(lst1 == lst2)
+
+#Copy : Tất nhiên là giá trị của nó giống nhau còn địa chỉ của nó khác nhau
+lst3 = [1, 3, 4]
+lst4 = lst3.copy()
+
+# is
+# id: Lấy ra địa chỉ (giống pointer &)
+print(id(lst3), id(lst4))
+print(lst3 is lst4)
+print(lst3 == lst4)
+
+print("----------------List slicing------------")
+#    0  1   2   3    4
+a = [1, 3, 10, 100, 45]
+new_lst = a[0:2:1] # [start:end:step] không lấy giá trị ở end, default step 1
+print(new_lst)
+print(new_lst is a)
