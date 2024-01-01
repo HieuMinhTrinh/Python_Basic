@@ -96,3 +96,57 @@ print(len(lst))
 lst = [4,2,3,1]
 s = ' - '.join(map(str, lst)) # Hàm map convert từng giá trị ở lst thành str
 print(s)
+# Bài tập
+"""
+Yêu cầu:
+a, Lấy ra giá trị của các key sau: album_name, release_year bằng hai cách
+b, Thay đổi giá trị của key: release_year từ 1973 thành 1971
+c, Xóa phần tử với key là track_list
+d, Thêm một key mới là amount = 2000 bằng 2 cách
+e. Làm trống dict: album_info
+"""
+import json
+album_info = {
+    "album_name": "The Dark Side of the Moon",
+    "band": "Pink Floyd",
+    "release_year": "1971",
+    "track_list": [
+            "Speak to Me",
+            "Breathe",
+            "On the Run",
+            "Time",
+            "The Great Gig in the Sky",
+            "Money",
+            "Us and Them",
+            "Any Colour You Like",
+            "Brain Damage",
+            "Eclipse",
+    ]
+}
+# a, Lấy ra giá trị của các key sau: album_name, release_year bằng hai cách
+# Cách 1:
+print(f"C1.Album: {album_info['album_name']} and Release: {album_info['release_year']}")
+# Cách 2:
+print(f"C2.Album: {album_info.get('album_name')} and Release: {album_info.get('release_year')}")
+# b, Thay đổi giá trị của key: release_year từ 1973 thành 1971
+album_info['release_year'] = 1973
+print(json.dumps(album_info, indent= 4))
+
+# c, Xóa phần tử với key là track_list
+# del album_info['track_list']
+# print(json.dumps(album_info, indent= 4))
+value = album_info.pop("track_list")
+print(value) # value là 1 List chứa những key vừa pop
+print(json.dumps(album_info, indent= 4))
+# d, Thêm một key mới là amount = 2000 bằng 2 cách
+# album_info['amount'] = 2000
+# print(json.dumps(album_info, indent= 4))
+update_key = {
+    "amount": 2000
+}
+album_info.update(update_key)
+print(json.dumps(album_info, indent= 4))
+
+#e. Làm trống dict: album_info 
+album_info.clear()
+print(json.dumps(album_info, indent= 4))
