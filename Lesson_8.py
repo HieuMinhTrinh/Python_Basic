@@ -98,7 +98,7 @@ def greet(msg):
     return None
 
 hello = greet
-print(hello("Jen")) # In ra : Hello Jen bởi vì hello("Jen") trước màu tím 
+print(hello("Jen")) # In ra : Hello Jen bởi vì hello("Jen") trước ngoặc màu tím 
                     #       : None      sau đó mới print() ngoài line 101
 
 def func():

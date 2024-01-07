@@ -55,9 +55,9 @@ lst1 = ['a', 'b', 'c', 'd']
 lst2 = (1, 2, 3, 4, 5)
 lst3 = ['a1', 'b1', 'c1', 'd1']
 print(list(zip(lst1, lst2, lst3)))
-
+#       1    2    3
 lst = ["a", "b", "c"]
-print(list(enumerate(lst, start = 1)))
+print(list(enumerate(lst, start = 1))) # List tup
 
 lst4 = ('a', 'b', 'c')
 lst5 = (1,2,3)
