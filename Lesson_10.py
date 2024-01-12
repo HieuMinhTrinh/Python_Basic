@@ -111,7 +111,7 @@ if __name__ == '__main__': # Terminilogy testing , câu điều kiện test
             wallet[c].make_payment(100)
             print('New balance = ', wallet[c].get_balance())
         print()
-# Operator - Overloading
+# Operator - Overloading : Hiểu là có những lúc Ta phải định nghĩa lại phép Cộng + để phù hợp với yêu cầu: ví dụ cộng 2 vector khác với phép cộng bình thường, etc
 class GFG: 
     def __init__(self, val): 
         self.val = val 
