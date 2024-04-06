@@ -22,6 +22,7 @@ def add_movies():
     while name in prevs:
         print("Movie names are duplicated\t")
         name         = input("Enter the movie name\t: ")
+        
     director         = input("Enter the movie director\t: ")
     release_year     = input("Enter release of the movie\t: ")
     # Tạo ra bộ phim
